@@ -113,11 +113,23 @@ document.addEventListener('DOMContentLoaded', function() {
 
     blogCards.forEach(card => blogGrid.appendChild(card));
 
-    // Cat follows mouse
-    const cat = document.getElementById('cat');
-    document.addEventListener('mousemove', (e) => {
-        cat.style.left = `${e.clientX}px`;
-        cat.style.top = `${e.clientY}px`;
-    });
+// Typing Animation
+const typingText = document.querySelector('.typing-animation');
+const text = typingText.textContent;
+typingText.textContent = '';
+
+let index = 0;
+function type() {
+    if (index < text.length) {
+        typingText.textContent += text.charAt(index);
+        index++;
+        setTimeout(type, 100);
+    } else {
+        // Remove the typing animation class when complete
+        typingText.classList.add('typing-complete');
+    }
+}
+
+type();
 
 });
