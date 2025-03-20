@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Power of Dark Mode in Web Design - Harsha's Blog</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <a href="index.html"><h1>Harsha</h1></a>
+        </div>
+        <button class="mobile-nav-toggle">
+            <i class="fas fa-bars"></i>
+        </button>
+        <nav>
+            <ul>
+                <li><a href="index.html">Portfolio</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="blog.html" class="active">Blog</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <article class="blog-post">
+            <div class="container">
+                <div class="blog-post-header">
+                    <h1>The Power of Dark Mode in Web Design</h1>
+                    <div class="blog-post-meta">
+                        <span><i class="far fa-calendar-alt"></i> March 1, 2025</span>
+                        <span><i class="far fa-user"></i> By Harsha</span>
+                    </div>
+                </div>
+                
+                <img src="images/blog-2-full.jpg" alt="The Power of Dark Mode in Web Design">
+                
+                <p>
+                    Dark mode has become increasingly popular in web design, and for good reason. Not only does it offer a sleek and modern look, but it also provides several benefits for users and designers alike. In this post, we'll explore the advantages of dark mode and how you can implement it effectively in your web projects.
+                </p>
+                
+                <h2>Benefits of Dark Mode</h2>
+                
+                <p>
+                    There are several reasons why dark mode has gained traction:
+                </p>
+                
+                <h3>1. Reduced Eye Strain</h3>
+                
+                <p>
+                    Dark mode can reduce eye strain, especially in low-light environments. By using darker backgrounds and lighter text, users can experience less glare and fatigue when viewing screens for extended periods.
+                </p>
+                
+                <h3>2. Improved Battery Life</h3>
+                
+                <p>
+                    On OLED screens, dark mode can save battery life. Since OLED displays light up individual pixels, using darker colors means fewer pixels are illuminated, leading to lower power consumption.
+                </p>
+                
+                <h3>3. Aesthetic Appeal</h3>
+                
+                <p>
+                    Dark mode offers a modern and sophisticated look. It can make colors and content stand out, creating a visually appealing experience for users.
+                </p>
+                
+                <h2>Implementing Dark Mode</h2>
+                
+                <p>
+                    Implementing dark mode in your web design can be straightforward with the use of CSS variables. Here's a basic example of how to set up a dark theme:
+                </p>
+                
+                <h3>1. Define CSS Variables</h3>
+                
+                <p>
+                    Start by defining your color variables in the <code>:root</code> selector:
+                </p>
+                
+                <pre><code>:root {
+    --bg-color: #121212;
+    --text-color: #e0e0e0;
+    --accent-color: #64ffda;
+    --secondary-bg: #1e1e1e;
+    --card-bg: #252525;
+}</code></pre>
+                
+                <h3>2. Apply Variables to Your Styles</h3>
+                
+                <p>
+                    Next, apply these variables to your CSS rules:
+                </p>
+                
+                <pre><code>body {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+}
+
+a {
+    color: var(--accent-color);
+}
+
+.card {
+    background-color: var(--card-bg);
+}</code></pre>
+                
+                <h3>3. Add a Theme Toggle</h3>
+                
+                <p>
+                    To allow users to switch between light and dark modes, you can add a theme toggle button and use JavaScript to change the CSS variables dynamically:
+                </p>
+                
+                <pre><code>&lt;button id="theme-toggle"&gt;Toggle Dark Mode&lt;/button&gt;
+
+&lt;script&gt;
+document.getElementById('theme-toggle').addEventListener('click', function() {
+    document.body.classList.toggle('dark-mode');
+});
+&lt;/script&gt;
+
+&lt;style&gt;
+.dark-mode {
+    --bg-color: #ffffff;
+    --text-color: #000000;
+    --accent-color: #007bff;
+    --secondary-bg: #f8f9fa;
+    --card-bg: #ffffff;
+}
+&lt;/style&gt;</code></pre>
+                
+                <h2>Conclusion</h2>
+                
+                <p>
+                    Dark mode is a powerful tool in web design, offering numerous benefits for both users and designers. By understanding its advantages and implementing it effectively, you can enhance the user experience and create a visually appealing interface. Give dark mode a try in your next web project and see the difference it makes!
+                </p>
+                
+                <div class="blog-post-footer">
+                    <p>
+                        <em>Last updated on March 1, 2025 by Harsha</em>
+                    </p>
+                </div>
+            </div>
+        </article>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="social-links">
+                <a href="https://www.linkedin.com/in/gnana-sri-harsha-sathuluri-732869350/"><i class="fab fa-linkedin"></i></a>
+                <a href="https://github.com/harsha260"><i class="fab fa-github"></i></a>
+                <a href="mailto:s.gnanasriharsha@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i></a>
+            </div>
+            <p>&copy; 2025 Harsha. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
